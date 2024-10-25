@@ -9,29 +9,47 @@ class Numbers {
       this.data = data;
     }
   }
-  count() {
+  count(data) {
     //return the count of numbers in data
+    return this.data.length;
   }
   printNumbers() {
     //print the numbers in data
+    this.data.forEach((number, index) => {
+      const numbers = console.log(`index ${index}: number ${number}`);
+      
+    } );
+    
   }
   odds() {
     //return the odd numbers in data
+    const oddNum = this.data.filter((number) => number % 2 !== 0);
+    return oddNum;
   }
   evens() {
     //return the even numbers in data
+    const evenNum = this.data.filter((number) => number % 2 === 0);
+    return evenNum;
   }
   sum() {
     //return the sum of the numbers
+    const total = this.data.reduce((element, sum) => element + sum, 0);
+    return total;
   }
   product() {
     //return the product of the numbers
+    const product = this.data.reduce((element, sum) => element * sum, 1);
+    return product;
   }
   greaterThan(target) {
     //return the numbers greater than the target
+    const greater = this.data.filter((number) => number > target);
+    return greater;
   }
   howMany(target) {
     //return the count of a given number
+    const greater = this.data.filter((number) => number === target);
+    return greater;
   }
 }
 
